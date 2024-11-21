@@ -19,10 +19,12 @@
 
 Here’s a quick walkthrough of my portfolio:
 
-
-<iframe width="600" height="400" src="https://www.youtube.com/embed/mCJzvm1NF28" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+![Portfolio Walkthrough](./video/portfolio.gif)
 </br>
+</br>
+</br>
+[youtube video link](https://www.youtube.com/watch?v=mCJzvm1NF28)
+
 </br>
 </br>
 
@@ -46,4 +48,3 @@ MONGO_URL = your mongo url
 
 <h3> If you’d like to use this code for building your own website, feel free to do so! 🎉
 All I ask is for a shout-out to let people know about my work. 😊 </h3>
-=======
