@@ -4,7 +4,7 @@
 
 #### myself `nikhil wankhde` , I’m excited to share my **Portfolio Website**, a space where I showcase my work and projects crafted with my programming expertise.
 
-<<<<<<< HEAD
+
 ---
 
 ## **Tech Stack**
@@ -46,12 +46,6 @@ MONGO_URL = your mongo url
 
 ## **Free to Use**
 
-If you’d like to use this code for building your own website, feel free to do so! 🎉
-All I ask is for a shout-out to let people know about my work. 😊
+<h3> If you’d like to use this code for building your own website, feel free to do so! 🎉
+All I ask is for a shout-out to let people know about my work. 😊 </h3>
 =======
-[live link](https://nikhil-wankhade.onrender.com/)
-
-&&
-
-[new live link on vercel](https://portfolio-nikhil-iota.vercel.app/)
->>>>>>> b289230b60d0aa803e8cbe9a7be2af2ac1f02907
