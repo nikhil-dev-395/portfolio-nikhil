@@ -19,10 +19,9 @@
 
 Here’s a quick walkthrough of my portfolio:
 
-<video controls width="600">
-  <source src="./video/portfolio.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+<iframe width="600" height="400" src="https://www.youtube.com/embed/mCJzvm1NF28" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </br>
 </br>
 </br>
