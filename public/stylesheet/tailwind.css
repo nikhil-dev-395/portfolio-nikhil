@@ -624,10 +624,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-9 {
-  margin-top: 2.25rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1131,6 +1127,14 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-moz-selection{
+  color: yellow;
+}
+
+::selection{
+  color: yellow;
 }
 
 .hover\:rounded-2xl:hover {
