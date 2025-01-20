@@ -8,11 +8,14 @@
     development
   </p>
 
-  <div id="skill-box" class="w-[95%] mx-auto flex flex-col gap-6 md:flex-row md:gap-x-4">
+  <div
+    id="skill-box"
+    class="w-[95%] mx-auto flex flex-col gap-6 md:flex-row md:gap-x-4"
+  >
     <!-- Frontend Skills -->
     <div
       id="frontend-skills"
-      class="w-full md:w-1/3 border rounded-xl px-4 py-4"
+      class="w-full md:w-1/3 border border-slate-700 rounded-xl px-4 py-4"
     >
       <h3 class="text-lg md:text-xl font-semibold text-center py-3">
         Frontend Development
@@ -34,7 +37,7 @@
     <!-- Backend Skills -->
     <div
       id="backend-skills"
-      class="w-full md:w-1/3 border rounded-md px-4 py-4"
+      class="w-full md:w-1/3 border border-slate-700 rounded-xl px-4 py-4"
     >
       <h3 class="text-lg md:text-xl font-semibold text-center py-3">
         Backend Development
@@ -43,7 +46,11 @@
         <% backend.forEach(skill => { %>
         <li class="text-xs md:text-sm border px-3 py-2 inline-block rounded-md">
           <div class="flex items-center gap-2">
-            <img src="<%= skill.backendSkillIcon %>" alt="<%= skill.backendSkillIcon %>" class="w-4 h-4"/>
+            <img
+              src="<%= skill.backendSkillIcon %>"
+              alt="<%= skill.backendSkillIcon %>"
+              class="w-4 h-4"
+            />
             <span><%= skill.backendSkillName %></span>
           </div>
         </li>
@@ -52,13 +59,20 @@
     </div>
 
     <!-- Tools -->
-    <div id="tools" class="w-full md:w-1/3 border rounded-md px-4 py-4">
+    <div
+      id="tools"
+      class="w-full md:w-1/3 border border-slate-700 rounded-xl px-4 py-4"
+    >
       <h3 class="text-lg md:text-xl font-semibold text-center py-3">Tools</h3>
       <ul class="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
         <% tool.forEach(skill => { %>
         <li class="text-xs md:text-sm border px-3 py-2 inline-block rounded-md">
           <div class="flex items-center gap-2">
-            <img src="<%= skill.toolIcon %>" alt="<%= skill.toolIcon %>" class="w-4 h-4"/>
+            <img
+              src="<%= skill.toolIcon %>"
+              alt="<%= skill.toolIcon %>"
+              class="w-4 h-4"
+            />
             <span><%= skill.toolName %></span>
           </div>
         </li>
