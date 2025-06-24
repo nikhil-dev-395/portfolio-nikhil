@@ -237,7 +237,8 @@ app.post("/experience", async (req, res) => {
       .status(500)
       .json({ message: "internal server error", error: error.message });
   }
-})(async () => {
+});
+(async () => {
   await connectDB();
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
