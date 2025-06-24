@@ -4,7 +4,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
-const  PORT =process.env.PORT || 4000
+const PORT = process.env.PORT || 4000;
 // files
 const { webRouter } = require("../src/routes/web.routes.js");
 const connectDB = require("../src/db/connect.db.js");
@@ -15,6 +15,7 @@ const backendSkill = require("../src/models/backendSkill.models.js");
 const frontendSkill = require("../src/models/frontendSkills.models.js");
 const project = require("../src/models/project.models.js");
 const techStack = require("../src/models/techStack.models.js");
+const Experience = require("../src/models/experience.models.js");
 const port = process.env.PORT || 4909;
 app.use(express.json());
 app.use(cors());
@@ -181,11 +182,66 @@ app.post("/techStack", async (req, res) => {
   }
 });
 
-(async () => {
+// experience
+
+app.post("/experience", async (req, res) => {
+  try {
+    const {
+      companyName,
+      startDate,
+      endDate,
+      isWorkingHere,
+      designation,
+      companyExperience,
+    } = req.body;
+
+    if (
+      !companyName ||
+      !startDate ||
+      !endDate ||
+      !isWorkingHere ||
+      !designation ||
+      !companyExperience
+    ) {
+      return res.status(400).json({ message: "please provide all inputs" });
+    }
+
+    let doesExperienceExists = await Experience.find({
+      companyName,
+      startDate,
+      endDate,
+      isWorkingHere,
+      designation,
+      companyExperience,
+    });
+
+    if (doesExperienceExists.length > 0) {
+      return res.status(409).json({
+        message: `experience with ${companyName} and ${designation} already exists`,
+      });
+    }
+    await Experience.create({
+      companyName,
+      startDate,
+      endDate,
+      isWorkingHere,
+      designation,
+      companyExperience,
+    });
+
+    return res.status(201).json({
+      message: `experience with ${companyName} and ${designation} created successFully`,
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "internal server error", error: error.message });
+  }
+})(async () => {
   await connectDB();
-   app.listen(PORT, () => {
-     console.log(`Server is running on http://localhost:${PORT}`);
-   });
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
 })();
 
 module.exports = app;
