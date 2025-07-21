@@ -9,6 +9,11 @@ const experienceSchema = new mongoose.Schema(
       lowercase: true,
       index: true,
     },
+    image: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     startDate: {
       type: String,
       required: true,
@@ -41,5 +46,5 @@ const experienceSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
- const Experience = mongoose.model("Experience", experienceSchema);
- module.exports = Experience;
+const Experience = mongoose.model("Experience", experienceSchema);
+module.exports = Experience;
