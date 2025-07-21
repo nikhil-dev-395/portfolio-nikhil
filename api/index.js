@@ -193,13 +193,14 @@ app.post("/experience", async (req, res) => {
       isWorkingHere,
       designation,
       companyExperience,
+      image,
     } = req.body;
 
     if (
       !companyName ||
       !startDate ||
       !endDate ||
-      !isWorkingHere ||
+      isWorkingHere === undefined ||
       !designation ||
       !companyExperience
     ) {
@@ -227,6 +228,7 @@ app.post("/experience", async (req, res) => {
       isWorkingHere,
       designation,
       companyExperience,
+      image: "https://portfolio-nikhil-iota.vercel.app/",
     });
 
     return res.status(201).json({
