@@ -1224,8 +1224,8 @@ video {
     max-width: 80%;
   }
 
-  .sm\:flex-col {
-    flex-direction: column;
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:items-center {
@@ -1349,10 +1349,6 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-col {
-    flex-direction: column;
   }
 
   .md\:justify-start {
