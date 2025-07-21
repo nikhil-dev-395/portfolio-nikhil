@@ -1208,6 +1208,10 @@ video {
     margin-top: 5rem;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:w-5 {
     width: 1.25rem;
   }
@@ -1218,6 +1222,14 @@ video {
 
   .sm\:max-w-\[80\%\] {
     max-width: 80%;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:items-center {
+    align-items: center;
   }
 
   .sm\:gap-3 {
@@ -1337,6 +1349,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:justify-start {

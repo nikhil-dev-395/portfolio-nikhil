@@ -7,6 +7,8 @@ const backendSkill = require("../models/backendSkill.models.js");
 const tools = require("../models/tools.models.js");
 const project = require("../models/project.models.js");
 const techStack = require("../models/techStack.models.js");
+const Experience = require("../models/experience.models.js");
+const experienceDuration = require("../utils/experience.js");
 router.get("/", async (req, res) => {
   try {
     // Fetch `whatAreDoingNowDays` field
@@ -37,6 +39,8 @@ router.get("/", async (req, res) => {
 
     const myTechStack = await techStack.find({}, "techIcon techName");
 
+    const experience = await Experience.find({});
+
     // Render the index view with the fetched data
     res.render("index", {
       whatAreDoingNowDays: activity.whatAreDoingNowDays,
@@ -50,6 +54,8 @@ router.get("/", async (req, res) => {
       tool,
       myProject,
       myTechStack,
+      experience,
+      experienceDuration,
     });
   } catch (err) {
     console.error("Error retrieving data:", err);
