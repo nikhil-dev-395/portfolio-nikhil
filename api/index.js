@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
 require("dotenv").config();
@@ -18,7 +18,7 @@ const techStack = require("../src/models/techStack.models.js");
 const Experience = require("../src/models/experience.models.js");
 const port = process.env.PORT || 4909;
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../views"));
